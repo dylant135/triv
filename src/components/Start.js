@@ -7,7 +7,7 @@ export default function Start(props) {
     return (
         <div className="start">
             <h1>Quizical</h1>
-            <button className="startbtn" onClick={startGame}>Start</button>
+            <button className="startbtn" onClick={startGame}>Start Quiz</button>
         </div>
     )
 }

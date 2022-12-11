@@ -5,10 +5,18 @@ import Start from './components/Start';
 
 function App() {
   const [start, setStart] = React.useState(false)
+  const [questions, setQuestions] = React.useState()
+
+  React.useEffect(() => {
+    fetch('https://opentdb.com/api.php?amount=10&category=21')
+    .then(res => res.json())
+    .then(data => setQuestions(data.results))
+  }, [])
+
   return (
     <div className="App">
       {!start && <Start setStart={setStart} />}
-      {start && <Questions />}
+      {start && <Questions questions={questions} />}
     </div>
   );
 }
