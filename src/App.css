@@ -33,3 +33,25 @@ h1 {
   color: white;
   cursor: pointer;
 }
+
+.question {
+  width: 80vw;
+  margin: auto;
+  margin-top: 7px;
+  padding: 7px;
+  border: 2px solid black;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.choice {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 8px 0;
+  text-align: center;
+}

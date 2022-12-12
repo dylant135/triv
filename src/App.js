@@ -8,11 +8,12 @@ function App() {
   const [questions, setQuestions] = React.useState()
 
   React.useEffect(() => {
-    fetch('https://opentdb.com/api.php?amount=10&category=21')
+    fetch('https://opentdb.com/api.php?amount=10&type=multiple')
     .then(res => res.json())
     .then(data => setQuestions(data.results))
   }, [])
 
+  console.log(questions)
   return (
     <div className="App">
       {!start && <Start setStart={setStart} />}
