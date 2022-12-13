@@ -13,7 +13,6 @@ function App() {
     .then(data => setQuestions(data.results))
   }, [])
 
-  console.log(questions)
   return (
     <div className="App">
       {!start && <Start setStart={setStart} />}
