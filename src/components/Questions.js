@@ -42,10 +42,13 @@ export default function Questions(props) {
         return arr
     }
 
+    let count = 0
     const x = qArr.map(a => {
+        count++
         return (
             <Question
                 key={a.corrrectAnswer}
+                id={count}
                 question={a.question}
                 corrrectAnswer={a.correct_answer}
                 choice1={a.choices[0]}
@@ -53,9 +56,23 @@ export default function Questions(props) {
                 choice3={a.choices[2]}
                 choice4={a.choices[3]}
                 setQArray={setQArray}
+                choose={choose}
             />
         )
     })
+
+    function choose(id) {
+        const targ = id
+        /*for(let i = 0; i < 4; i++) {
+            if(qArr.choice[i + 1].isSelected) {
+                setQArray(prevState => {
+                    const current = prevState[i]
+                    return {...current}
+                })
+            }
+        }*/
+        console.log(targ)
+    }
     /*
         array of object
         each object corrisponds to a question
